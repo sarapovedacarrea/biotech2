@@ -1,0 +1,537 @@
+
+/* =========================
+   ESTILOS GENERALES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f7f8;
+    color: #17323d;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+/* =========================
+   MENÚ
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #092631;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1180px;
+    min-height: 75px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #62d5b0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 7px;
+    color: #dcebed;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #1e4b5a;
+    color: #6de3bd;
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 85% 25%, rgba(98, 213, 176, 0.2), transparent 25%),
+        linear-gradient(135deg, #092631, #164654, #0b2d3a);
+}
+
+.hero-contenido {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+    padding: 90px 0;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 8px 14px;
+    border: 1px solid #62d5b0;
+    border-radius: 30px;
+    color: #62d5b0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin-bottom: 25px;
+    color: white;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    letter-spacing: -3px;
+    line-height: 0.95;
+}
+
+.subtitulo {
+    max-width: 600px;
+    color: #d0e2e6;
+    font-size: 1.1rem;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 13px 25px;
+    border-radius: 8px;
+    background-color: #62d5b0;
+    color: #092631;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #9af0d5;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+    padding: 90px 0;
+}
+
+.seccion-oscura {
+    width: 100%;
+    max-width: none;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #102f3b;
+    color: #dcebed;
+}
+
+.titulo-seccion {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 45px;
+}
+
+.titulo-seccion span {
+    color: #35b98e;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.titulo-seccion h2 {
+    color: #17323d;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.seccion-oscura .titulo-seccion h2 {
+    color: white;
+}
+
+/* =========================
+   ¿QUÉ ES?
+========================= */
+
+.contenido-dos-columnas {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.contenido-dos-columnas p {
+    color: #536b73;
+    font-size: 1.05rem;
+}
+
+.tarjeta-destacada {
+    padding: 42px;
+    border: 1px solid #d6e8e5;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(20, 60, 70, 0.08);
+}
+
+.icono-grande {
+    margin-bottom: 20px;
+    font-size: 4rem;
+}
+
+.tarjeta-destacada h3 {
+    margin-bottom: 15px;
+    color: #123e4a;
+    font-size: 1.6rem;
+}
+
+.tarjeta-destacada p {
+    margin-bottom: 0;
+}
+
+/* =========================
+   ÁREAS
+========================= */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    padding: 30px 24px;
+    border-radius: 15px;
+    background-color: #174352;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    background-color: #22596a;
+    transform: translateY(-6px);
+}
+
+.icono {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.tarjeta h3 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1.15rem;
+}
+
+.tarjeta p {
+    margin-bottom: 0;
+    color: #c9dfe3;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   APLICACIONES
+========================= */
+
+.aplicaciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.aplicacion {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 30px;
+    border-left: 4px solid #62d5b0;
+    border-radius: 0 14px 14px 0;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(20, 60, 70, 0.06);
+    transition: 0.3s;
+}
+
+.aplicacion:hover {
+    transform: translateY(-4px);
+}
+
+.aplicacion > span {
+    color: #35a982;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.aplicacion h3 {
+    margin-bottom: 10px;
+    color: #153c49;
+    font-size: 1.3rem;
+}
+
+.aplicacion p {
+    margin-bottom: 0;
+    color: #5a6e75;
+}
+
+/* =========================
+   BENEFICIOS Y DESAFÍOS
+========================= */
+
+.comparacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.ventaja,
+.desafio {
+    padding: 35px;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(20, 60, 70, 0.06);
+}
+
+.ventaja {
+    border-top: 5px solid #42bd91;
+}
+
+.desafio {
+    border-top: 5px solid #e2a24c;
+}
+
+.ventaja h3 {
+    margin-bottom: 20px;
+    color: #218d68;
+}
+
+.desafio h3 {
+    margin-bottom: 20px;
+    color: #bd7a24;
+}
+
+.ventaja ul,
+.desafio ul {
+    padding-left: 22px;
+}
+
+.ventaja li,
+.desafio li {
+    margin-bottom: 10px;
+    color: #526870;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz {
+    text-align: center;
+    background-color: #e4f3ef;
+    border-radius: 20px;
+    margin-top: 45px;
+    margin-bottom: 70px;
+}
+
+.quiz .titulo-seccion {
+    justify-content: center;
+    text-align: left;
+}
+
+.quiz-caja {
+    max-width: 680px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 0 10px 35px rgba(20, 60, 70, 0.08);
+}
+
+.quiz-caja h3 {
+    margin-bottom: 25px;
+    color: #173b47;
+    font-size: 1.25rem;
+}
+
+.quiz-caja button {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    padding: 14px 18px;
+    border: 1px solid #c9dfdc;
+    border-radius: 9px;
+    background-color: #f5fbfa;
+    color: #21434d;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.quiz-caja button:hover {
+    border-color: #42bd91;
+    background-color: #e0f5ed;
+}
+
+#resultado {
+    min-height: 28px;
+    margin-top: 22px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+    padding: 45px 20px;
+    text-align: center;
+    background-color: #092631;
+    color: #b7cdd2;
+}
+
+footer .logo {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 950px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .contenido-dos-columnas {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 600px) {
+    .navbar {
+        gap: 15px;
+    }
+
+    .menu {
+        gap: 3px;
+    }
+
+    .menu a {
+        padding: 7px 8px;
+        font-size: 0.78rem;
+    }
+
+    .hero {
+        min-height: 540px;
+    }
+
+    .hero-contenido {
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 3.6rem;
+        letter-spacing: -2px;
+    }
+
+    .subtitulo {
+        font-size: 0.98rem;
+    }
+
+    .seccion {
+        padding: 65px 0;
+    }
+
+    .seccion-oscura {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .titulo-seccion {
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 1.8rem;
+    }
+
+    .tarjetas,
+    .aplicaciones,
+    .comparacion {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-destacada,
+    .quiz-caja,
+    .ventaja,
+    .desafio,
+    .aplicacion {
+        padding: 25px;
+    }
+}
